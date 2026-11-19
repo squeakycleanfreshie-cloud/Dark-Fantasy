@@ -3,6 +3,8 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+image bg fountain = im.Scale("bg fountain.jpg", config.screen_width, config.screen_height)
+
 define v = Character("Vance", image="vance")
 define l = Character("Lucian", image="")
 define a = Character("Queen Astrid", image="astrid")
@@ -23,13 +25,13 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show vance
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    v "You've created a new Ren'Py game."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    v "Once you add a story, pictures, and music, you can release it to the world!"
 
     # This ends the game.
 
