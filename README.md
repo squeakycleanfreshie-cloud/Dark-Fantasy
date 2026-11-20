@@ -1,6 +1,6 @@
 <div align="center">
 
-# Dark-Fantasy
+# Dark Fantasy
 
 A fantasy visual novel made in Ren'Py.
 
