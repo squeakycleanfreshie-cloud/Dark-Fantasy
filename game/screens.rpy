@@ -1253,16 +1253,10 @@ style skip_text:
     size gui.notify_text_size
 
 style skip_triangle:
-    ## We have to use a font that has the BLACK RIGHT-POINTING SMALL TRIANGLE
-    ## glyph in it.
+
     font "DejaVuSans.ttf"
 
 
-## Notify screen ###############################################################
-##
-## The notify screen is used to show the player a message. (For example, when
-## the game is quicksaved or a screenshot has been taken.)
-##
 ## https://www.renpy.org/doc/html/screen_special.html#notify-screen
 
 screen notify(message):
