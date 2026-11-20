@@ -20,38 +20,20 @@ define config.check_conflicting_properties = True
 ################################################################################
 
 
-## Colors ######################################################################
-##
-## The colors of text in the interface.
+define gui.accent_color = '#8c2f2f'
+define gui.idle_color = '#8d9693'
+define gui.idle_small_color = '#6f7875'
+define gui.hover_color = '#c4cac6'
+define gui.selected_color = '#e8d4c4'
+define gui.insensitive_color = '#8d96934c'
+define gui.muted_color = '#3b5230'
+define gui.hover_muted_color = '#587a48'
+define gui.text_color = '#d8ddd9'
+define gui.interface_text_color = '#c4cac6'
 
-## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#cc6600'
-
-## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#707070'
-
-## The small color is used for small text, which needs to be brighter/darker to
-## achieve the same effect.
-define gui.idle_small_color = '#606060'
-
-## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#cc6600'
-
-## The color used for a text button when it is selected but not focused. A
-## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#555555'
-
-## The color used for a text button when it cannot be selected.
-define gui.insensitive_color = '#7070707f'
-
-## Colors used for the portions of bars that are not filled in. These are not
-## used directly, but are used when re-generating bar image files.
-define gui.muted_color = '#e0a366'
-define gui.hover_muted_color = '#eac199'
-
-## The colors used for dialogue and menu choice text.
-define gui.text_color = '#404040'
-define gui.interface_text_color = '#404040'
+## Backgrounds (solid colours, no image files needed)
+define gui.main_menu_background = Solid("#0e120d")
+define gui.game_menu_background = Solid("#141a12")
 
 
 ## Fonts and Font Sizes ########################################################
@@ -478,3 +460,29 @@ init python:
 
         gui.nvl_button_width = 1860
         gui.nvl_button_xpos = 30
+
+style window:
+    background Solid("#0e120de6")
+
+style namebox:
+    background Solid("#3b5230")
+    padding (20, 6)
+
+style say_label:
+    color "#e8d4c4"
+    bold True
+
+style choice_button:
+    background Solid("#1f2a1b")
+    hover_background Solid("#3b5230")
+    padding (20, 10)
+
+style choice_button_text:
+    color "#8d9693"
+    hover_color "#e8d4c4"
+
+style confirm_frame:
+    background Solid("#0e120df2")
+
+style frame:
+    background Solid("#141a12e6")
