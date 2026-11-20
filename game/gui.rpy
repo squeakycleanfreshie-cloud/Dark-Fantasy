@@ -31,7 +31,6 @@ define gui.hover_muted_color = '#587a48'
 define gui.text_color = '#d8ddd9'
 define gui.interface_text_color = '#c4cac6'
 
-## Backgrounds (solid colours, no image files needed)
 define gui.main_menu_background = Solid("#0e120d")
 define gui.game_menu_background = Solid("#141a12")
 

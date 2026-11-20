@@ -25,7 +25,7 @@ style say_label:
     font "fonts/font.otf"
     color "#a8c796"
     bold False
-    size 80
+    size 200
 
 style say_dialogue:
     font "fonts/font2.ttf"
