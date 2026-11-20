@@ -31,3 +31,5 @@ You should check out death to stock here: deathtothestockphoto.com
 I used AI to help me theme the UI. 
 
 ## Image Gallery
+<img width="1339" height="715" alt="Screenshot 2026-11-20 at 7 14 12 pm" src="https://github.com/user-attachments/assets/31ec32fd-3a0f-4a21-aed0-9339a7a9206b" />
+
