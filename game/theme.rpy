@@ -11,7 +11,7 @@ define gui.quick_button_text_idle_color = "#8d9693"
 define gui.quick_button_text_hover_color = "#a8c796"
 define gui.interface_text_font = "fonts/font2.ttf"
 
-define gui.main_menu_background = Transform("bg fountain.jpg", xysize=(config.screen_width, config.screen_height), fit="fill")
+define gui.main_menu_background = Transform("bg castle.jpg", xysize=(config.screen_width, config.screen_height), fit="fill")
 
 
 style window:
