@@ -6,7 +6,7 @@ A fantasy visual novel made in Ren'Py.
 
 [![Made with Ren'Py](https://img.shields.io/badge/Made_with-Ren%27Py-ff7f7f)](https://www.renpy.org/)
 [![Made with VS Code](https://img.shields.io/badge/Made_with-VS_Code-007ACC?logo=visualstudiocode&logoColor=white)](https://www.vscode.dev/)
-[![Hack Club Terra](https://img.shields.io/badge/Hack_Club-Terra-ec3750)](https://www.terra.hackclub.com/)
+[![Hack Club Terra](https://img.shields.io/badge/Hack_Club-Terra-ec3750)](https://terra.hackclub.com//)
 
 </div>
 
