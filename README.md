@@ -1,8 +1,8 @@
 # Dark-Fantasy
 A fantasy Visual Novel made in Renpy
-[![Made with Ren'Py](https://shields.io)](https://www.renpy.org/)
-[![Made with VScode](https://shields.io)](https://www.vscode.dev/)
-[![Hack Club Terra Project](https://shields.io)](https://www.terra.hackclub.com/)
+[![Made with Ren'Py](https://img.shields.io/badge/Made_with-Ren%27Py-ff7f7f)](https://www.renpy.org/)
+[![Made with VS Code](https://img.shields.io/badge/Made_with-VS_Code-007ACC?logo=visualstudiocode&logoColor=white)](https://www.vscode.dev/)
+[![Hack Club Terra](https://img.shields.io/badge/Hack_Club-Terra-ec3750)](https://www.terra.hackclub.com/)
 
 ## Features
 - Branching Dialog
