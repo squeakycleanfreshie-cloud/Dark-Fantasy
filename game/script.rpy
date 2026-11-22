@@ -184,15 +184,51 @@ label wife_looking:
     v "Further up in the path, you spot someone walking towards you."
     v "You go to say hello"
     v "Hey!"
-    w ""
-
+    w "Hi-Vance? Is that your name?"
+    v "That is correct"
+    w "Your the kings son, right?"
+    v "That is also correct."
+    w "Well, I'll see you around"
+    w "My mother and I are new to Dorpat, we moved in from the south"
+    v "well if you need anything, feel free to ask me"
+    v "You and him pass ways."
+    v "He was nice."
+    v "Eventually you arrive at the pub."
+    #change scene to pub
+    v "The pub is empty. Its the morning."
+    v "What a useless walk."
+    v "You walk back home, to your room, upset with the faliure of this morning."
+    v "Its the afternoon, so you meet up with Runa for your market visit"
     jump markets
 
 label bored:
+    v "I'm so bored"
+    v "What could I do?"
+    menu:
+        "Write some Poetry":
+            v "You get out your notebook and a pen"
+            v "You write some words on a pain paper"
+            v "After you have finished it reads"
+            v "A lover I must, fall in love, My father belives, forces me, into something I hate."
+            v "You don't know if your proud of it."
+            v "Before you know it, its the afternoon, and time to go to the markets with Runa"
+            jump markets
+        "Read a book":
+            v "You go over to your book shelf, and pick out a book"
+            menu:
+                "Sweets: A Cookbook":
+                    v "You open the cookbook and r"
+                
+                "The Dragons Quest":
+
+                "A history of Europe":
+
+label reading:
+    v "You finish your book, and head down to the pond to meet Runa to go to the Markets"
     jump markets
 
 label markets:
-    r "Vance, I made it."
+    r "Vance, You made it."
     v "Yes, I'm here"
     r "Good, I thought you wouldn't come"
     v "Why?"
