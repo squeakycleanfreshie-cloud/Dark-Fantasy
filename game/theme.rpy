@@ -25,12 +25,12 @@ style say_label:
     font "fonts/font.otf"
     color "#a8c796"
     bold False
-    size 200
+    size 100
 
 style say_dialogue:
     font "fonts/font2.ttf"
     color "#d8ddd9"
-    ypos 100
+    ypos 120
 
 style main_menu_frame:
     background Fixed(Solid("#0e120d"), Solid("#587a48", xsize=4, xalign=1.0))

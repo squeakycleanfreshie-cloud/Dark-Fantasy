@@ -235,6 +235,8 @@ style choice_button_text is default:
 ## The quick menu is displayed in-game to provide easy access to the out-of-game
 ## menus.
 
+default quick_menu = True
+
 screen quick_menu():
 
     ## Ensure this appears on top of other screens.
@@ -261,7 +263,6 @@ screen quick_menu():
 init python:
     config.overlay_screens.append("quick_menu")
 
-default quick_menu = True
 
 style quick_menu is hbox
 style quick_button is default

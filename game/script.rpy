@@ -27,8 +27,8 @@ image bg bedroom = im.Scale("bg bedroom.jpg", config.screen_width, config.screen
 
 image king = Transform("images/king.png", zoom=1.1)
 
-default lover = false
-default sexuality = straight
+default lover = False
+default sexuality = "straight"
 
 init -1 python:
     import store
@@ -135,12 +135,13 @@ label start:
             k "I will give you 20 days"
             v "Pa."
             k "I will not budge. 20 days vance."
-            v "You storm away with a bitter taste in your mouth"
+            v "You storm away to your room with a bitter taste in your mouth"
             v "You feel like you have never been able to love"
             v "You have always been different from other men your age."
             v "As teenagers, they all had girlfreinds, and lovers"
             v "Wheras you, were always just a bachelor"
             v "As your frends called you, alone forever."
+
             $ sexuality = "gay"
             jump post_argument
 
@@ -156,9 +157,12 @@ label start:
             a "And that was the best decision of my life, saying yes to you, when you came up to me."
             v "You and your parents continue flirting."
             v "Gross."
-            v "You walk away, down to your room."
+            v "You walk away, down to your room do lie down and sleep."
+            jump post_argument
     
 label post_argument:
+    scene bg bedroom with fade 
+
 
 label agree:
 
