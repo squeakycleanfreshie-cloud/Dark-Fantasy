@@ -27,6 +27,8 @@ image bg bedroom = im.Scale("bg bedroom.jpg", config.screen_width, config.screen
 image bg forest = im.Scale("bg forest.jpg", config.screen_width, config.screen_height)
 
 image king = Transform("images/king.png", zoom=1.1)
+image william = Transform("images/william.png", zoom=0.9)
+
 
 default lover = False
 
@@ -178,6 +180,8 @@ label wife_looking:
     v "Ugh, I'll guess I will go."
     v "You walk begin walking down do the towns pub, named The Boars Head"
     scene bg forest with fade
+    show vance at left
+    show william at right
     v "The morning air is warm, and the sun shines on your skin."
     v "You don't get many moments like this"
     v "Moments of solitude"
@@ -217,21 +221,47 @@ label bored:
             v "You go over to your book shelf, and pick out a book"
             menu:
                 "Sweets: A Cookbook":
-                    v "You open the cookbook and r"
+                    v "You open the cookbook and read it"
+                    v "+1 cooking"
+                    jump reading
                 
                 "The Dragons Quest":
+                    v "You read a chapter of the book"
+                    v "+1 Creativity"
+                    jump reading
 
                 "A history of Europe":
+                    v "You learn about the Roman Empire"
+                    v "+1 Knowledge"
+                    jump reading
 
 label reading:
     v "You finish your book, and head down to the pond to meet Runa to go to the Markets"
     jump markets
 
 label markets:
+    scene bg fountain
+    show runa at left 
+    show vance at right
     r "Vance, You made it."
     v "Yes, I'm here"
     r "Good, I thought you wouldn't come"
     v "Why?"
     r "Vance, your so unreliable"
     r "You always forget whenever we have something on."
+    v "That is not true runa. Besides if anyone forgets, its always you."
+    r "Stop trying to put the blame on me."
+    v "Fine."
+    v "You and Runa, walk over to the markets."
+    scene bg forest with fade
+    show runa at left 
+    show vance at right
+    v "My dad is forcing me to get married."
+    r "What?"
+    v "I know, its so unlike him. He's always been so softly spoken"
+    v "never controlling"
+    v "but today, he was different."
+    r "sounds so odd"
+    r "so what are you going to do?"
+    r "do you have anyone in mind?"
     return
