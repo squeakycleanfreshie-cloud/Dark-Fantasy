@@ -367,6 +367,7 @@ label wedding_ring:
             jump dont_buy_ring
 
 label buy_ring:
+    v "You purchase the ring, and put it inside your pocket"
     jump groceries
 
 label dont_buy_ring:
@@ -408,5 +409,58 @@ label post_markets:
     v "you eventually have to split paths"
     v "you think your late, so you run the rest of the way home"
     v "you make home just in time for dinner."
+    # change this to dining room
+    scene bg throneroom
+    k "How was your day son?"
+    v "It was good."
+    k "Any progress on finding a lover?"
+    if lover == "Runa":
+        v "actually, I did."
+        k "Who?"
+        v "Runa."
+        k "the castle seer?"
+        v "Yes. Shes pretty and kind and funny, and I enjoy spending time with her."
+        k "You two were just freinds"
+        v "Yes."
+        k "So when are you going to get married?"
+        v "I haven't disscussed it with her yet, but soon I belive."
+        if wedding_ring == "none":
+            jump dinner_discussion
+        else:
+            v "I have bought her a beautiful ring though. She will love it."
+            a "may I see?"
+            v "Sure mother"
+            v "You pull the beautiful shining ring out of your pocket"
+            v "its beautiful, isn't it"
+            a "yes, you have good taste son."
+            k "and how much did this cost?"
+            if wedding_ring == "saphire":
+                v "1000p I belive"
+                k "You got a good deal son."
+                jump dinner_discussion
+            elif wedding_ring == "emerald":
+                v "1500p I belive"
+                k "You got a bad deal son."
+                a "but as long as she will like the ring, It is alright"
+                jump dinner_discussion
+            elif wedding_ring == "amythest":
+                k "You got a horrific deal son."
+                v "But I love it. And Runa will love it."
+                a "but as long as she will like the ring, It is alright"
+                jump dinner_discussion
+            else:
+                v "I don't remember."
+                jump dinner_discussion
+
+            
+    else:
+        v "no, I didn't have any luck."
+        k "keep trying son, and eventually you shall suceed"
+        a "but what if he doen't sucseed richard"
+        k "he shall not go on any crusaides, fights or battles. I will not let him."
+        jump dinner_discussion
+
+label dinner_discussion:
+    v ""
 
     return
