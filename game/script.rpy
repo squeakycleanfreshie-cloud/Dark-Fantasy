@@ -25,6 +25,7 @@ image bg castle = im.Scale("bg castle.jpg", config.screen_width, config.screen_h
 image bg throneroom = im.Scale("bg throneroom.jpg", config.screen_width, config.screen_height)
 image bg bedroom = im.Scale("bg bedroom.jpg", config.screen_width, config.screen_height)
 image bg forest = im.Scale("bg forest.jpg", config.screen_width, config.screen_height)
+image bg markets = im.Scale("bg markets.jpg", config.screen_width, config.screen_height)
 
 image king = Transform("images/king.png", zoom=1.1)
 image william = Transform("images/william.png", zoom=0.9)
@@ -275,7 +276,7 @@ label markets:
             v "the rest of the trip over is really akward"
             jump markets_scene
         "accept":
-            $ lover = "Luna"
+            $ lover = "Runa"
             v "runa."
             r "yes."
             v "you really love me?"
@@ -288,7 +289,7 @@ label markets:
             v "you and her walk until you reach the markets"
             jump markets_scene
 
-label markets:
+label markets_scene:
     scene bg markets
     r "we are here!"
     r "it is so busy!"
@@ -300,7 +301,7 @@ label markets:
     r "I can't tell you, its a secret."
     v "runa!"
     v "runa runs off in a different direction to run her errand. What do you do?"
-    if lover == "Luna":
+    if lover == "Runa:
         menu:
             "buy a wedding ring for luna":
                 jump wedding_ring
@@ -318,10 +319,30 @@ label markets:
                 jump walk_around_markets
     
 label markets_wife_looking:
+    v "you walk around the markets, looking for a potential partner"
+    v "nobody really strikes your eye."
+    v "10 minutes pass, and you spot Runa in the distance, finishing her errand."
+    v "you walk over to her."
+    r "lets get the rest of the groceries, shall we?"
+    jump groceries
 
 label look_at_swords:
+    v "You go over to a sword stall, and look at the swords"
+    v "Nothing catches your eye in particular"
+    v "Besides, you already have a vast collection of swords at home."
+    v "You turn around, and spot Runa in the distance, finishing her errand."
+    v "you walk over to her."
+    r "lets get the rest of the groceries, shall we?"
+    jump groceries
 
 label walk_around_markets:
+    v "You look around the food stall, and go to buy a chicken leg"
+    v "You devour it."
+    v "delicious"
+    v "10 minutes pass, and you spot Runa in the distance, finishing her errand."
+    v "you walk over to her."
+    r "lets get the rest of the groceries, shall we?"
+    jump groceries
 
 label wedding_ring:
     v "you walk over to a ring stall, and as the person their for a ring"
@@ -346,7 +367,26 @@ label wedding_ring:
             jump dont_buy_ring
 
 label buy_ring:
+    jump groceries
 
-label dont_buy_ring
+label dont_buy_ring:
+    v "unfortunatly, I am not a fan of any of theese rings"
+    v "-ring vendour- that is fine sir, I hope to do buisness with you another day."
+    v "you check your watch and it 10 minutes have passed, you spot runa"
+    v "so runa, are you going to tell me what you were doing."
+    r "no."
+    if lover == "Runa":
+        v "we are going to get married, and your already keeping secrets from me."
+        v "just tell me."
+        r "what if its a gift for you?"
+        v "oh. I'm sorry runa."
+        r "its okay. you will find out soon."
+        jump groceries
+    else:
+        jump groceries
+
+label groceries:
+    v "runa pulls out a list of groceries and you and her visit all the shops, talking while you do it."
+    v "after a while, the sun sets and it is time to go home"
 
     return
