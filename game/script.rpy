@@ -31,6 +31,7 @@ image william = Transform("images/william.png", zoom=0.9)
 
 
 default lover = "single"
+default wedding_ring = "none"
 
 
 init -1 python:
@@ -299,9 +300,53 @@ label markets:
     r "I can't tell you, its a secret."
     v "runa!"
     v "runa runs off in a different direction to run her errand. What do you do?"
-    if lover == "Luna"
+    if lover == "Luna":
+        menu:
+            "buy a wedding ring for luna":
+                jump wedding_ring
+            "look at swords":
+                jump look_at_swords
+            "walk around": 
+                jump walk_around_markets
+    else:
+        menu:
+            "find a wife":
+                jump markets_wife_looking
+            "look at swords":
+                jump look_at_swords
+            "walk around":
+                jump walk_around_markets
+    
+label markets_wife_looking:
+
+label look_at_swords:
+
+label walk_around_markets:
+
+label wedding_ring:
+    v "you walk over to a ring stall, and as the person their for a ring"
+    # add in tha ring vendor sprite/person hier
+    v "Could I please look at your wedding rings?"
+    v "-Ring vendor- What is your budget?"
+    v "1500 denarius"
+    v "He pulls out a tray from below him."
+    v "-Ring vendor- Sir, you are looking at the finest rings from my collection."
+    v "-Ring vendor- Do you see anything you fancy?"
     menu:
-        "":
-        "":
-        "": 
+        "Red Saphire with Bronze Band - 1000p":
+            $ wedding_ring = "saphire"
+            jump buy_ring
+        "Silver Band with Emerald - 1500p":
+            $ wedding_ring = "emerald"
+            jump buy_ring
+        "Gold Band with Amythest - 2000p":
+            $ wedding_ring = "amythest"
+            jump buy_ring
+        "None":
+            jump dont_buy_ring
+
+label buy_ring:
+
+label dont_buy_ring
+
     return
