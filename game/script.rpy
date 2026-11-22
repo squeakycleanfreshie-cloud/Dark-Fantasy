@@ -387,6 +387,26 @@ label dont_buy_ring:
 
 label groceries:
     v "runa pulls out a list of groceries and you and her visit all the shops, talking while you do it."
+    v "you buy fruits, vegetables, meat, insnece, and some herb remedies."
+    if lover == "none":
+        r "vance,"
+        v "what?"
+        r "I got you something"
+        v "She pulls out a vile of liquid."
+        r "its a love potion."
+        r "so when you see the perfect wife, you can make her love you immeditaly."
+        v "thanks runa."
+        jump post_markets
+    else:
+        jump post_markets
+
+label post_markets:
+    v "you and runa continue walking through."
     v "after a while, the sun sets and it is time to go home"
+    scene bg forest with fade
+    v "You and runa walk home"
+    v "you eventually have to split paths"
+    v "you think your late, so you run the rest of the way home"
+    v "you make home just in time for dinner."
 
     return
