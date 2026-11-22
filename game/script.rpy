@@ -23,9 +23,12 @@ transform idle:
 image bg fountain = im.Scale("bg fountain.jpg", config.screen_width, config.screen_height)
 image bg castle = im.Scale("bg castle.jpg", config.screen_width, config.screen_height)
 image bg throneroom = im.Scale("bg throneroom.jpg", config.screen_width, config.screen_height)
+image bg bedroom = im.Scale("bg bedroom.jpg", config.screen_width, config.screen_height)
 
 image king = Transform("images/king.png", zoom=1.1)
 
+default lover = false
+default sexuality = straight
 
 init -1 python:
     import store
@@ -108,6 +111,55 @@ label start:
     k "Did she say anything significant?"
     v "Yes. She said that my next conquest would be unsucessful"
     k "I'm very worried for you Vance. Runa is almost never wrong."
+    v "I understand that Pa! Your wisdom offers me no closure."
+    v "Now why did you ask me to have a meeting with you?"
+    k "I have to discuss something very important with you."
+    v "Well tell me Pa!"
+    k "I'm getting to it Vance, be pacient son."
+    k "I'm heavy hearted about your Amours."
+    v "My Amours? But i'm a knight. I'm to busy for love pa"
+    v "and i'm only 23"
+    k "The perfect time to get married!"
+    v "I'm be out on conquests all the time. I don't see the point Pa."
+    k "When I was your age, I wanted to fall in love with a lovley woman was my dream."
+    k "You for one, don't seem to be interested in the matter at all."
+    v "It's just a matter of preferences Pa, and I don't want to get married, or for one find a lover."
+    k "Well. If you don't want to, Your not going on any sieges until you get married."
+    a "I think we should just let him have his way Richard"
+    k "I will not be moved"
+    menu:
+        "Fight the matter":
+            v "No Pa. I wish not to get married, I have so much of my life ahead to do so."
+            k "Well I will not budge either, but I can stop you from going on battles"
+            v "Please Pa, respect my wishes."
+            k "I will give you 20 days"
+            v "Pa."
+            k "I will not budge. 20 days vance."
+            v "You storm away with a bitter taste in your mouth"
+            v "You feel like you have never been able to love"
+            v "You have always been different from other men your age."
+            v "As teenagers, they all had girlfreinds, and lovers"
+            v "Wheras you, were always just a bachelor"
+            v "As your frends called you, alone forever."
+            $ sexuality = "gay"
+            jump post_argument
 
+        "Agree with his terms":
+            v "Fine Pa"
+            k "You have 30 days to find a lover."
+            v "Yes."
+            v "And what happens if I don't?"
+            k "I assure you son, that will not be happening"
+            k "Now go on. Those days will pass as fast as a cannon."
+            k "I reccomend The Boar’s Head to find your wife."
+            k "Its where I met your mother."
+            a "And that was the best decision of my life, saying yes to you, when you came up to me."
+            v "You and your parents continue flirting."
+            v "Gross."
+            v "You walk away, down to your room."
+    
+label post_argument:
+
+label agree:
 
     return

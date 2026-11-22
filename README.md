@@ -29,7 +29,7 @@ I won death to stock assets for free, so I decided to make the most of them in t
 You should check out death to stock here: deathtothestockphoto.com
 
 ## AI Usage
-I used AI to help me theme the UI. 
+I used AI to help me theme the UI. Didn't type it, just copy and pasted it quickly. And a tiny bit of debugging, but only came across a few bugs.
 
 ## Image Gallery
 <img width="1339" height="715" alt="Screenshot 2026-11-20 at 7 14 12 pm" src="https://github.com/user-attachments/assets/31ec32fd-3a0f-4a21-aed0-9339a7a9206b" />
