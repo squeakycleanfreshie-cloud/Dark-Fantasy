@@ -30,7 +30,7 @@ image king = Transform("images/king.png", zoom=1.1)
 image william = Transform("images/william.png", zoom=0.9)
 
 
-default lover = False
+default lover = "single"
 
 
 init -1 python:
@@ -264,4 +264,44 @@ label markets:
     r "sounds so odd"
     r "so what are you going to do?"
     r "do you have anyone in mind?"
+    v "no, not right now. do you have any ideas?"
+    r "i mean.. I could be your wife"
+    menu:
+        "reject":
+            v "i will kindly pass runa"
+            r "don't worry, I was just joking"
+            v "I know, I know."
+            v "the rest of the trip over is really akward"
+            jump markets_scene
+        "accept":
+            $ lover = "Luna"
+            v "runa."
+            r "yes."
+            v "you really love me?"
+            r "i mean, I don't hate you. and our star signs align"
+            v "I mean, i have never considered you as a partner"
+            v "but I'm open to it"
+            r "amazing!"
+            r "she leans in to give you a kiss."
+            v "wow, moving fast you think."
+            v "you and her walk until you reach the markets"
+            jump markets_scene
+
+label markets:
+    scene bg markets
+    r "we are here!"
+    r "it is so busy!"
+    v "yes, what did you say you wanted to get again?"
+    r "some produce and some supplies for work"
+    v "sounds good"
+    r "there is something I have to do by myself quickly though, so I'll meet you here in 10 minutes"
+    v "what is it?"
+    r "I can't tell you, its a secret."
+    v "runa!"
+    v "runa runs off in a different direction to run her errand. What do you do?"
+    if lover == "Luna"
+    menu:
+        "":
+        "":
+        "": 
     return
