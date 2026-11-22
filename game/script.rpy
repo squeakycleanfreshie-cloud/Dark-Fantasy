@@ -24,11 +24,12 @@ image bg fountain = im.Scale("bg fountain.jpg", config.screen_width, config.scre
 image bg castle = im.Scale("bg castle.jpg", config.screen_width, config.screen_height)
 image bg throneroom = im.Scale("bg throneroom.jpg", config.screen_width, config.screen_height)
 image bg bedroom = im.Scale("bg bedroom.jpg", config.screen_width, config.screen_height)
+image bg forest = im.Scale("bg forest.jpg", config.screen_width, config.screen_height)
 
 image king = Transform("images/king.png", zoom=1.1)
 
 default lover = False
-default sexuality = "straight"
+
 
 init -1 python:
     import store
@@ -38,6 +39,7 @@ init -1 python:
         "runa": "centerright",
         "king": "centerright",
         "astrid": "centerrightright",
+        "william":"right",
     }
 
     def focus(tag):
@@ -57,6 +59,7 @@ define r = Character("Runa", image="runa", callback=speaker("runa"))
 define l = Character("Lucian")
 define a = Character("Queen Astrid", image="astrid", callback=speaker("astrid"))
 define k = Character("King Keoghan", image="king", callback=speaker("king"))
+define w = Character("William", image="william", callback=speaker("william"))
 
 init python:
     cursor_scale = 0.25
@@ -141,8 +144,6 @@ label start:
             v "As teenagers, they all had girlfreinds, and lovers"
             v "Wheras you, were always just a bachelor"
             v "As your frends called you, alone forever."
-
-            $ sexuality = "gay"
             jump post_argument
 
         "Agree with his terms":
@@ -162,8 +163,39 @@ label start:
     
 label post_argument:
     scene bg bedroom with fade 
+    v "Agh."
+    menu:
+        "Find a Wife":
+            jump wife_looking
+        
+        "Find something else to do":
+            jump bored
 
 
-label agree:
 
+
+label wife_looking:
+    v "Ugh, I'll guess I will go."
+    v "You walk begin walking down do the towns pub, named The Boars Head"
+    scene bg forest with fade
+    v "The morning air is warm, and the sun shines on your skin."
+    v "You don't get many moments like this"
+    v "Moments of solitude"
+    v "Further up in the path, you spot someone walking towards you."
+    v "You go to say hello"
+    v "Hey!"
+    w ""
+
+    jump markets
+
+label bored:
+    jump markets
+
+label markets:
+    r "Vance, I made it."
+    v "Yes, I'm here"
+    r "Good, I thought you wouldn't come"
+    v "Why?"
+    r "Vance, your so unreliable"
+    r "You always forget whenever we have something on."
     return
