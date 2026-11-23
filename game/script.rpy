@@ -556,4 +556,10 @@ label jail:
     show runa at centerright, idle
     v "Runa!"
     r "Vance!"
+    r "What happened?"
+    v "My mother killed my dad, and framed it on me"
+    r "what!?"
+    r "why?"
+    v "I don't know yet, but I think really bad things are going to happen."
+    r "I'm worried vance..I've been having nightmares."
     return
