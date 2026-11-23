@@ -17,7 +17,7 @@ A fantasy visual novel made in Ren'Py.
 - Text animations
 
 ## How To Play
-Play at the itch.io link here:
+Play at the itch.io link here: https://remymorea.itch.io/dark-fantasy
 Just click to advance to the next line.
 
 ## Why I made This
