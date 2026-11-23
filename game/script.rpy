@@ -168,6 +168,7 @@ label start:
     
 label post_argument:
     scene bg bedroom with fade 
+    show vance at centerleft, idle
     v "Agh."
     menu:
         "Find a Wife":
@@ -199,6 +200,7 @@ label wife_looking:
     w "My mother and I are new to Dorpat, we moved in from the south"
     v "well if you need anything, feel free to ask me"
     v "You and him pass ways."
+    hide william
     v "He was nice."
     v "Eventually you arrive at the pub."
     #change scene to pub
@@ -292,6 +294,8 @@ label markets:
 
 label markets_scene:
     scene bg markets
+    show runa at left
+    show vance at right
     r "we are here!"
     r "it is so busy!"
     v "yes, what did you say you wanted to get again?"
@@ -301,6 +305,7 @@ label markets_scene:
     v "what is it?"
     r "I can't tell you, its a secret."
     v "runa!"
+    hide runa
     v "runa runs off in a different direction to run her errand. What do you do?"
     if lover == "Runa":
         menu:
@@ -324,6 +329,7 @@ label markets_wife_looking:
     v "nobody really strikes your eye."
     v "10 minutes pass, and you spot Runa in the distance, finishing her errand."
     v "you walk over to her."
+    show runa at left
     r "lets get the rest of the groceries, shall we?"
     jump groceries
 
@@ -333,6 +339,7 @@ label look_at_swords:
     v "Besides, you already have a vast collection of swords at home."
     v "You turn around, and spot Runa in the distance, finishing her errand."
     v "you walk over to her."
+    show runa at left
     r "lets get the rest of the groceries, shall we?"
     jump groceries
 
@@ -342,6 +349,7 @@ label walk_around_markets:
     v "delicious"
     v "10 minutes pass, and you spot Runa in the distance, finishing her errand."
     v "you walk over to her."
+    show runa at left
     r "lets get the rest of the groceries, shall we?"
     jump groceries
 
@@ -375,6 +383,7 @@ label dont_buy_ring:
     v "unfortunatly, I am not a fan of any of theese rings"
     v "-ring vendour- that is fine sir, I hope to do buisness with you another day."
     v "you check your watch and it 10 minutes have passed, you spot runa"
+    show runa at left
     v "so runa, are you going to tell me what you were doing."
     r "no."
     if lover == "Runa":
@@ -388,6 +397,7 @@ label dont_buy_ring:
         jump groceries
 
 label groceries:
+    show runa at left
     v "runa pulls out a list of groceries and you and her visit all the shops, talking while you do it."
     v "you buy fruits, vegetables, meat, insnece, and some herb remedies."
     if lover == "none":
@@ -406,12 +416,18 @@ label post_markets:
     v "you and runa continue walking through."
     v "after a while, the sun sets and it is time to go home"
     scene bg forest with fade
+    show runa at left
+    show vance at right
     v "You and runa walk home"
     v "you eventually have to split paths"
+    hide runa
     v "you think your late, so you run the rest of the way home"
     v "you make home just in time for dinner."
     # change this to dining room
     scene bg throneroom
+    show astrid at centerrightright, idle
+    show king at centerright, idle
+    show vance at left
     k "How was your day son?"
     v "It was good."
     k "Any progress on finding a lover?"
@@ -475,10 +491,13 @@ label dinner_discussion:
     v "The dinner room goes silent, and everybody finishes their meals"
     a "The dinner ends promptly"
     scene bg bedroom
+    show vance at centerleft, idle
     v "You go to bed, full of food and your eyes tired and sore."
     scene bg bedroom with fade
+    show vance at centerleft, idle
     v "all of the house is dark. Your blinds have been shut close."
     v "Your mother walks into the room, sheilded by a black veil."
+    show astrid at centerrightright, idle
     a "I am a widow!"
     v "Tears run down her face, obviously in distress."
     v "What Happened!"
@@ -515,4 +534,26 @@ label dinner_discussion:
     a "Guards!"
     v "A group of guards come in, and take you to a prison sell."
     scene bg prison with hpunch
+    show vance at centerleft, idle
+    v "Your stuck in an empty prison cell. All of the castles staff are on your mothers side."
+    v "What do you try to do?"
+    menu:
+        "Escape":
+            v "You look around the room"
+            v "you can't see anything to escape"
+            v "You try to squeese out of the window"
+            v "But its no use"
+            v "You guess you will just have to wait longer."
+            jump jail
+        "Wait for your Mother to Come":
+            jump jail
+
+label jail:
+    v "You wait, and wait"
+    v "hours and hours pass"
+    v "but nobody has came down to meet you at all"
+    v "its around lunchtime now, and a member of staff comes down to meet you, along with Runa"
+    show runa at centerright, idle
+    v "Runa!"
+    r "Vance!"
     return
