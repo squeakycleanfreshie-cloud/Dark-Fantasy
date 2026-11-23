@@ -301,7 +301,7 @@ label markets_scene:
     r "I can't tell you, its a secret."
     v "runa!"
     v "runa runs off in a different direction to run her errand. What do you do?"
-    if lover == "Runa:
+    if lover == "Runa":
         menu:
             "buy a wedding ring for luna":
                 jump wedding_ring
@@ -461,6 +461,30 @@ label post_markets:
         jump dinner_discussion
 
 label dinner_discussion:
-    v ""
-
+    k "Did you do anything interesting astrid?"
+    a "I started working on a new artwork. It is going very well."
+    k "I heard their was this new disease coming into our country."
+    k "its called the Plauge"
+    a "Probably will be nothing, things like this happen all of the time."
+    v "Yes, I agree."
+    k "I recived quite an odd letter this afternoon."
+    v "What did it read?"
+    k "I know this is quite odd, but it read 'fear for your life'"
+    a "that is quite odd Richard"
+    v "The dinner room goes silent, and everybody finishes their meals"
+    a "The dinner ends promptly"
+    scene bg bedroom
+    v "You go to bed, full of food and your eyes tired and sore."
+    scene bg bedroom with fade
+    v "all of the house is dark. Your blinds have been shut close."
+    v "Your mother walks into the room, sheilded by a black veil."
+    a "I am a widow!"
+    v "Tears run down her face, obviously in distress."
+    v "What Happened!"
+    v "Your eyes are still sore, and your head still confused from just waking up."
+    a "Your father is dead! Last night."
+    v "You and her break into tears sitting on your bed."
+    v "Hours pass, this extreeme sadness still bubbling inside of you"
+    a "I think we must get up. I think it is better for us to do something, to take our minds off of it."
+    v "No. I cannot. Pa is dead. Dead."
     return
