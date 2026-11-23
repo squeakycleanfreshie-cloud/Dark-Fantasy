@@ -26,6 +26,7 @@ image bg throneroom = im.Scale("bg throneroom.jpg", config.screen_width, config.
 image bg bedroom = im.Scale("bg bedroom.jpg", config.screen_width, config.screen_height)
 image bg forest = im.Scale("bg forest.jpg", config.screen_width, config.screen_height)
 image bg markets = im.Scale("bg markets.jpg", config.screen_width, config.screen_height)
+image bg prison = im.Scale("bg prison.jpg", config.screen_width, config.screen_height)
 
 image king = Transform("images/king.png", zoom=1.1)
 image william = Transform("images/william.png", zoom=0.9)
@@ -487,4 +488,31 @@ label dinner_discussion:
     v "Hours pass, this extreeme sadness still bubbling inside of you"
     a "I think we must get up. I think it is better for us to do something, to take our minds off of it."
     v "No. I cannot. Pa is dead. Dead."
+    a "I understand that."
+    v "Do they know what caused his death?"
+    a "No. I beleive its a murder."
+    v "What? Why?"
+    a "Your father was in perfectly good health."
+    a "What would cause him to die so abrubtly?"
+    v "That disease he was talking about last night, the plauge? Maybe he caught it?"
+    a "unlikly. How would he have caught it if he hasn't been out of town."
+    v "How is it even possible if you were in bed with him the whole night?"
+    a "I have not figured that part out yet."
+    v "and who would even want to murder him?"
+    a "now vance, I need you to answer my question entirely honestly."
+    v "yes"
+    a "Did you murder your father?"
+    v "of course not! Why would I murder my father, that I love?"
+    a "He is forcing you to marry."
+    v "Thats not enough a reason to kill him!"
+    a "I know you did it, Vance."
+    v "But I didn't! I don't have a clue why you are blaming this on me."
+    v "Your mother has an evil smile, knowing what she did."
+    v "You murdered him!"
+    a "But unfortunatley vance, that is not true. It is unfortunate though, that your hair was found all along his body, along with all the servants, who saw you near his room last night."
+    v "So your framing me? Your framing me for my fathers murder. A murder YOU commited?"
+    a "That is not the truth, for all I know, you commited the murder."
+    a "Guards!"
+    v "A group of guards come in, and take you to a prison sell."
+    scene bg prison with hpunch
     return

@@ -23,6 +23,10 @@ Just click to advance to the next line.
 ## Why I made This
 I made this because I wanted to use my free DTS visuals to the max, and I wanted to dive back into renpy when experimenting with godot. I made this also for Hack Clubs terra.
 
+## What I learned
+In this project, I refreshed my knowlege if renpy, inluding variables, if/elif statements, dialog and player choices.
+Also, I learned about godot text animations and making the game more engadging.
+
 ## Assets
 I won death to stock assets for free, so I decided to make the most of them in this project and make a small game with them. The assets are roalty free and I have the rights to them (for 6 months at least...). I used the DTS Dark Fantasy Drop by Shauna Summers for this one (my main inspo for the game), and they look incredible. I also used some cute BG images from pintrest too. 
 
